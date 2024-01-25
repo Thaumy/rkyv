@@ -9,7 +9,10 @@ use core::{alloc::Layout, ptr};
 use ptr_meta::Pointee;
 use rancor::Fallible;
 use std::alloc;
+#[cfg(feature = "std")]
 use std::ffi::{CStr, CString};
+#[cfg(not(feature = "std"))]
+use alloc::ffi::{CStr, CString};
 
 // CStr
 

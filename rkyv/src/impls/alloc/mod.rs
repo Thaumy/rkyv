@@ -4,3 +4,4 @@ mod niche;
 mod rc;
 mod string;
 mod vec;
+mod ffi;
